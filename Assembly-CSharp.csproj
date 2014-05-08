@@ -49,6 +49,7 @@
      <Compile Include="Assets\script\CameraControl.cs" />
      <Compile Include="Assets\script\Contant.cs" />
      <Compile Include="Assets\script\HeroMoveControl.cs" />
+     <Compile Include="Assets\script\HeroShoot.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

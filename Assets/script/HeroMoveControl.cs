@@ -26,14 +26,7 @@ public class HeroMoveControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		//isGround = Physics2D.Linecast (transform.position,ground.position,1<<LayerMask.NameToLayer("Ground"));
 
-		//if(Input.GetAxis (Contant.Vertical)>0 && isGround)
-		//	jump = true;
-
-		//isGround = false;
-
-		//print ("Update");
 	}
 
  
@@ -57,7 +50,9 @@ public class HeroMoveControl : MonoBehaviour {
 		//print ("FixedUpdate");
 
 		float h = Input.GetAxis (Contant.Horizontal);
-		float v = Input.GetAxis (Contant.Vertical);
+		//float v = Input.GetAxis (Contant.Vertical);
+
+		bool isDownJump = Input.GetKey(KeyCode.K);
 		 
 		if(h!=0)
 		{
@@ -90,7 +85,7 @@ public class HeroMoveControl : MonoBehaviour {
 		}
 
 
-		if(v>0 && isGround)
+		if(isDownJump  && isGround)
 		{
 			//jump
 			isGround = false;
@@ -118,6 +113,9 @@ public class HeroMoveControl : MonoBehaviour {
 		Vector3 vec = transform.localScale;
 		vec.x *= -1;
 		transform.localScale = vec;
+        
+		//animator.SetBool(Contant.Animator_isStand,true);
+		animator.Play ("hero_stand"); //jie jue zhuan shen shi hou hai zai she ji zhuan tai
 	}
 
  

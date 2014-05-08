@@ -49,6 +49,7 @@
      <Compile Include="Assets\script\CameraControl.cs" />
      <Compile Include="Assets\script\Contant.cs" />
      <Compile Include="Assets\script\HeroMoveControl.cs" />
+     <Compile Include="Assets\script\HeroShoot.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
