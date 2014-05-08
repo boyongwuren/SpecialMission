@@ -9,4 +9,7 @@ public class Contant
 	public static string Animator_isRun = "isRun";
 	public static string Animator_isJump = "isJump";
 
+	public static string Animator_isShoot = "isShoot";
+	public static string Animator_isStand = "isStand";
+
 }
