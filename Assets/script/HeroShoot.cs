@@ -18,12 +18,17 @@ public class HeroShoot : MonoBehaviour
 		bool isDownShoot = Input.GetKeyDown (KeyCode.J);
 		bool isDownUp = Input.GetKeyDown (KeyCode.W);
 
-		if (isDownShoot&& !isDownUp) 
+		if (isDownShoot) 
 		{
 			animator.SetTrigger(Contant.Animator_isShoot);
-		}else if(isDownShoot && isDownUp)
+		} 
+
+		if(isDownUp)
 		{
-			
+			animator.SetFloat(Contant.Animator_isShootUp,1.5f);
+		}else
+		{
+			animator.SetFloat(Contant.Animator_isShootUp,0.5f);
 		}
 
 	}

@@ -113,8 +113,7 @@ public class HeroMoveControl : MonoBehaviour {
 		Vector3 vec = transform.localScale;
 		vec.x *= -1;
 		transform.localScale = vec;
-        
-		//animator.SetBool(Contant.Animator_isStand,true);
+         
 		animator.Play ("hero_stand"); //jie jue zhuan shen shi hou hai zai she ji zhuan tai
 	}
 
